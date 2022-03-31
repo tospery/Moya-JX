@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Moya-JX"
-  s.version      = "15.0.0-v1"
+  s.version      = "15.0.0-v2"
   s.summary      = "Network abstraction layer written in Swift"
   s.description  = <<-EOS
   Moya abstracts network commands using Swift Generics to provide developers
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.subspec "Combine" do |ss|
     ss.source_files  = "Sources/CombineMoya/"
-    ss.dependency "Moya/Core"
+    ss.dependency "Moya-JX/Core"
     ss.framework  = "Combine"
     ss.ios.deployment_target = '13.0'
     ss.osx.deployment_target = '10.15'
@@ -40,13 +40,13 @@ Pod::Spec.new do |s|
 
   s.subspec "ReactiveSwift" do |ss|
     ss.source_files = "Sources/ReactiveMoya/"
-    ss.dependency "Moya/Core"
+    ss.dependency "Moya-JX/Core"
     ss.dependency "ReactiveSwift", "~> 6.6.1"
   end
 
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Sources/RxMoya/"
-    ss.dependency "Moya/Core"
+    ss.dependency "Moya-JX/Core"
     ss.dependency "RxSwift", "~> 6.0"
   end
 end
